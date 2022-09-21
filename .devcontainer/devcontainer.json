@@ -2,15 +2,17 @@
 	"name": "お試しDev Container",
 	"build": {
 		"dockerfile": "Dockerfile",
-		"args": { "VARIANT": "16-bullseye" }
+		"args": { "VARIANT": "16-bullseye" },
 	},
 
 	"customizations": {
 		"vscode": {
 			"settings": {},
 						"extensions": [
-				"dbaeumer.vscode-eslint"
-			]
+							"dbaeumer.vscode-eslint",
+							"GitHub.copilot",
+							"oderwat.indent-rainbow"
+						]
 		}
 	},
 	"portsAttributes": {
@@ -19,6 +21,6 @@
 			"onAutoForward": "notify"
 		}
 	},
-	"postCreateCommand": "./.devcontainer/postCreateCommand.sh",
+	"postCreateCommand": "/workspaces/vscode-remote-try-node/.devcontainer/postCreateCommand.sh",
 	"remoteUser": "node"
 }

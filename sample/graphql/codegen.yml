@@ -1,0 +1,9 @@
+# 実行する場所がカレントディレクトリになるっぽい
+schema: './sample/graphql/schema.graphql'
+generates:
+  ./sample/graphql/generates/graphql.ts:
+    config:
+      useIndexSignature: true
+    plugins:
+      - typescript
+      - typescript-resolvers
